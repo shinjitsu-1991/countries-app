@@ -4,6 +4,7 @@ import {connect} from "react-redux";
 import getCurrentTranslation from "translation/currentTranslation";
 import CountriesItem from "components/CountriesItem";
 import Spinner from "components/Spinner";
+import {Grid} from "@material-ui/core";
 
 const CountriesList = (props) => {
     const translation = getCurrentTranslation(props.lang);
@@ -24,7 +25,10 @@ const CountriesList = (props) => {
     }
 
     return (
-        <>{returnedElements()}</>
+        <Grid
+            container spacing={3}>
+            {returnedElements()}
+        </Grid>
     );
 }
 

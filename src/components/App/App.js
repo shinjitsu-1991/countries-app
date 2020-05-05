@@ -15,7 +15,7 @@ const App = (props) => {
             return (
                 <div className='choose-lang_container'>
                     {lang.map((item) => {
-                        return <ChooseLang key={item["lang"]} lang={item["lang"]} mess={item["translations"][0]["entry_mess"]} />
+                        return <ChooseLang view="list" key={item["lang"]} lang={item["lang"]} mess={item["translations"][0]["entry_mess"]} />
                     })}
                 </div>
             )

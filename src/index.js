@@ -22,10 +22,8 @@ const store = createStore(
 saga.run(sagaWatcher);
 
 ReactDOM.render(
-  <React.StrictMode>
-      <Provider store={store}>
-          <App />
-      </Provider>
-  </React.StrictMode>,
+  <Provider store={store}>
+      <App />
+  </Provider>,
   document.getElementById('root')
 );
